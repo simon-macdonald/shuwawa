@@ -4,6 +4,7 @@ export function useCategories(initial?: string[]) {
   const categories = [
     { id: "foodAndDrink", label: "飲食" },
     { id: "family", label: "家族物" },
+    { id: "hobbies", label: "趣味" },
   ];
 
   const [selected, setSelected] = useState<Record<string, boolean>>(() => {

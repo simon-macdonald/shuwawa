@@ -2,6 +2,7 @@ import { useState } from "react";
 import { shuffle } from "lodash";
 import { quizData as family } from "./family";
 import { quizData as foodAndDrink } from "./foodAndDrink";
+import { quizData as hobbies } from "./hobbies";
 import type { QuizItem } from "./quizItem";
 
 type QuizStatus = "idle" | "in-progress" | "completed";
@@ -24,6 +25,7 @@ export function useQuiz(): UseQuiz {
     const videos = [
       ...(selectedCategories.includes("foodAndDrink") ? foodAndDrink : []),
       ...(selectedCategories.includes("family") ? family : []),
+      ...(selectedCategories.includes("hobbies") ? hobbies : []),
     ];
 
     const randomized = shuffle(videos);
