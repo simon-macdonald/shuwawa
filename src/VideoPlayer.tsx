@@ -1,32 +1,46 @@
 import YouTube from "react-youtube";
-import { quizData } from "./quiz/chapter13";
 import { Button } from "./components/ui/button";
-import { useMemo } from "react";
+import type { QuizItem } from "./quiz/quizItem";
+import allVideos from "./quiz/allCategories";
+import { sample } from "lodash";
 
 function VideoPlayer(props: {
-  index: number,
-  success: () => void,
-  failure: () => void,
+  quizItem: QuizItem;
+  success: () => void;
+  failure: () => void;
 }) {
-  const {index, success, failure} = props;
-  const quizItem = quizData[index];
+  const { quizItem, success, failure } = props;
 
-  const answers = [0, 3, 5, 7];
-  const shuffledAnswers = useMemo(() => {
-    return [...answers].sort(() => Math.random() - 0.5);
-  }, [index]);
+  const correctAnswer = <Button onClick={success}>{quizItem.vocab}</Button>;
+  const wrongAnswer1 = (
+    <Button onClick={failure}>{sample(allVideos)?.vocab}</Button>
+  );
+  const wrongAnswer2 = (
+    <Button onClick={failure}>{sample(allVideos)?.vocab}</Button>
+  );
+  const wrongAnswer3 = (
+    <Button onClick={failure}>{sample(allVideos)?.vocab}</Button>
+  );
+  const shuffledAnswers = [
+    correctAnswer,
+    wrongAnswer1,
+    wrongAnswer2,
+    wrongAnswer3,
+  ].sort(() => Math.random() - 0.05);
 
   return (
     <div style={{ position: "relative" }}>
       <YouTube
         videoId={quizItem.youtubeId}
-        onReady={(e) => {e.target.mute()}}
+        onReady={(e) => {
+          e.target.mute();
+        }}
         opts={{
           // https://developers.google.com/youtube/player_parameters
           playerVars: {
             autoplay: 1,
-            ...(quizItem.start && {start: quizItem.start}),
-            ...(quizItem.end && {end: quizItem.end}),
+            ...(quizItem.start && { start: quizItem.start }),
+            ...(quizItem.end && { end: quizItem.end }),
           },
         }}
       />
@@ -42,13 +56,9 @@ function VideoPlayer(props: {
           pointerEvents: "none",
         }}
       />
-      {shuffledAnswers.map((answer) =>(
-        <Button onClick={answer == 0 ? success : failure}>
-          {quizData[(index + answer) % quizData.length].vocab}
-        </Button>
-      ))}
+      {shuffledAnswers}
     </div>
-  )
+  );
 }
 
-export default VideoPlayer
+export default VideoPlayer;
