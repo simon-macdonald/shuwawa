@@ -6,10 +6,6 @@ export const quizData: QuizItem[] = [
     youtubeId: "k9B4qgbKMiE",
   },
   {
-    vocab: "読書",
-    youtubeId: "k9B4qgbKMiE",
-  },
-  {
     vocab: "映画",
     youtubeId: "ElLQZUm6LoU",
     start: 4,
