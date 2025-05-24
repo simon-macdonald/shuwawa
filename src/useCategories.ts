@@ -10,7 +10,7 @@ export function useCategories(initial?: string[]) {
   const [selected, setSelected] = useState<Record<string, boolean>>(() => {
     const defaults: Record<string, boolean> = {};
     for (const cat of categories) {
-      defaults[cat.id] = initial?.includes(cat.id) ?? false;
+      defaults[cat.id] = initial?.includes(cat.id) ?? true;
     }
     return defaults;
   });

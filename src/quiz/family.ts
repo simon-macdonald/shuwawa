@@ -6,6 +6,14 @@ export const quizData: QuizItem[] = [
     youtubeId: "6x4LmqXgbds",
   },
   {
+    vocab: "母",
+    youtubeId: "iYVLkjdnqVU",
+  },
+  {
+    vocab: "父",
+    youtubeId: "V_xhm1W6Yrc",
+  },
+  {
     vocab: "祖母",
     youtubeId: "c3XA6ZWxcrY",
   },
@@ -66,4 +74,4 @@ export const quizData: QuizItem[] = [
     youtubeId: "OtROM66dIx0",
     start: 4,
   },
-]
+];

@@ -2,7 +2,16 @@ import YouTube from "react-youtube";
 import { Button } from "./components/ui/button";
 import type { QuizItem } from "./quiz/quizItem";
 import allVideos from "./quiz/allCategories";
-import { sample } from "lodash";
+import { sample, shuffle } from "lodash";
+
+function findWrongAnswer(correctAnswer: string) {
+  const maybe = sample(allVideos)?.vocab;
+  if (correctAnswer !== maybe) {
+    return maybe;
+  }
+
+  return findWrongAnswer(correctAnswer);
+}
 
 function VideoPlayer(props: {
   quizItem: QuizItem;
@@ -13,23 +22,26 @@ function VideoPlayer(props: {
 
   const correctAnswer = <Button onClick={success}>{quizItem.vocab}</Button>;
   const wrongAnswer1 = (
-    <Button onClick={failure}>{sample(allVideos)?.vocab}</Button>
+    <Button onClick={failure}>{findWrongAnswer(quizItem.vocab)}</Button>
   );
   const wrongAnswer2 = (
-    <Button onClick={failure}>{sample(allVideos)?.vocab}</Button>
+    <Button onClick={failure}>{findWrongAnswer(quizItem.vocab)}</Button>
   );
   const wrongAnswer3 = (
-    <Button onClick={failure}>{sample(allVideos)?.vocab}</Button>
+    <Button onClick={failure}>{findWrongAnswer(quizItem.vocab)}</Button>
   );
-  const shuffledAnswers = [
+  const shuffledAnswers = shuffle([
     correctAnswer,
     wrongAnswer1,
     wrongAnswer2,
     wrongAnswer3,
-  ].sort(() => Math.random() - 0.05);
+  ]);
 
   return (
-    <div style={{ position: "relative" }}>
+    <div
+      className="w-full max-w-3xl aspect-video mx-auto"
+      style={{ position: "relative" }}
+    >
       <YouTube
         videoId={quizItem.youtubeId}
         onReady={(e) => {
@@ -43,18 +55,15 @@ function VideoPlayer(props: {
             ...(quizItem.end && { end: quizItem.end }),
           },
         }}
+        className="w-full h-full"
+        iframeClassName="w-full h-full"
       />
       <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          height: "56px",
-          width: "100%",
-          background: "#000",
-          zIndex: 1,
-          pointerEvents: "none",
-        }}
+        className={`
+          absolute top-0 left-0 w-full 
+          h-[clamp(30px,6vw,56px)] 
+        bg-black pointer-events-none z-10
+        `}
       />
       {shuffledAnswers}
     </div>

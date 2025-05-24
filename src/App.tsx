@@ -59,15 +59,15 @@ function App() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-svh px-4 space-y-6">
+      <p>
+        {index + 1} / {total}
+      </p>
       <VideoPlayer
         quizItem={currentVideo}
         success={success}
         failure={failure}
       />
       <ConfettiBurst trigger={showConfetti} />
-      <p>
-        {index + 1} / {total}
-      </p>
     </div>
   );
 }
