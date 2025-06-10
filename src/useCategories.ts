@@ -1,15 +1,10 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { allCategories } from "./quiz/allCategories";
 
 export function useCategories(initial?: string[]) {
-  const categories = [
-    { id: "foodAndDrink", label: "飲食" },
-    { id: "family", label: "家族物" },
-    { id: "hobbies", label: "趣味" },
-  ];
-
   const [selected, setSelected] = useState<Record<string, boolean>>(() => {
     const defaults: Record<string, boolean> = {};
-    for (const cat of categories) {
+    for (const cat of allCategories) {
       defaults[cat.id] = initial?.includes(cat.id) ?? true;
     }
     return defaults;
@@ -18,5 +13,11 @@ export function useCategories(initial?: string[]) {
   const toggle = (id: string) =>
     setSelected((prev) => ({ ...prev, [id]: !prev[id] }));
 
-  return { categories, selected, toggle };
+  const totalSelectedSigns = useMemo(() => {
+    return allCategories
+      .filter((cat) => selected[cat.id])
+      .reduce((sum, cat) => sum + cat.signs.length, 0);
+  }, [allCategories, selected]);
+
+  return { categories: allCategories, selected, toggle, totalSelectedSigns };
 }

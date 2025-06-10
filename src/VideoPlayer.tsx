@@ -1,8 +1,8 @@
 import YouTube from "react-youtube";
 import { Button } from "./components/ui/button";
 import type { QuizItem } from "./quiz/quizItem";
-import allVideos from "./quiz/allCategories";
 import { sample, shuffle } from "lodash";
+import { allVideos } from "./quiz/allCategories";
 
 function findWrongAnswer(correctAnswer: string) {
   const maybe = sample(allVideos)?.vocab;

@@ -4,6 +4,17 @@ import { quizData as hobbies } from "./hobbies";
 import { quizData as misc } from "./misc";
 import type { QuizItem } from "./quizItem";
 
-const allVideos: QuizItem[] = [...foodAndDrink, ...family, ...hobbies, ...misc];
+export type Category = {
+  id: string;
+  label: string;
+  signs: QuizItem[];
+};
 
-export default allVideos;
+export const allCategories: Category[] = [
+  { id: "foodAndDrink", label: "飲食", signs: foodAndDrink },
+  { id: "family", label: "家族物", signs: family },
+  { id: "hobbies", label: "趣味", signs: hobbies },
+  { id: "misc", label: "その他", signs: misc },
+];
+
+export const allVideos: QuizItem[] = allCategories.flatMap((cat) => cat.signs);

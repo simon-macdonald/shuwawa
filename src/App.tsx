@@ -12,7 +12,7 @@ import { CheckCircle } from "lucide-react";
 function App() {
   const [showConfetti, setShowConfetti] = useState(false);
 
-  const { categories, selected, toggle } = useCategories();
+  const { categories, selected, toggle, totalSelectedSigns } = useCategories();
 
   const { startQuiz, currentVideo, next, index, total, status } = useQuiz();
 
@@ -35,7 +35,7 @@ function App() {
           className="w-full max-w-md py-3 text-base font-semibold rounded-xl shadow-sm hover:bg-primary/90 transition"
           onClick={() => startQuiz(keys(pickBy(selected, Boolean)))}
         >
-          スタート
+          スタート （{totalSelectedSigns}個）
         </Button>
       </div>
     );

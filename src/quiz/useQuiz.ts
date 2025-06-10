@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { shuffle } from "lodash";
-import { quizData as family } from "./family";
-import { quizData as foodAndDrink } from "./foodAndDrink";
-import { quizData as hobbies } from "./hobbies";
 import type { QuizItem } from "./quizItem";
+import { allCategories } from "./allCategories";
 
 type QuizStatus = "idle" | "in-progress" | "completed";
 
@@ -22,11 +20,9 @@ export function useQuiz(): UseQuiz {
   const [status, setStatus] = useState<QuizStatus>("idle");
 
   const startQuiz = (selectedCategories: string[]) => {
-    const videos = [
-      ...(selectedCategories.includes("foodAndDrink") ? foodAndDrink : []),
-      ...(selectedCategories.includes("family") ? family : []),
-      ...(selectedCategories.includes("hobbies") ? hobbies : []),
-    ];
+    const videos = allCategories
+      .filter((cat) => selectedCategories.includes(cat.id))
+      .flatMap((cat) => cat.signs);
 
     const randomized = shuffle(videos);
     setQuizList(randomized);
