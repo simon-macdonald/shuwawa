@@ -44,6 +44,14 @@ export const quizData: QuizItem[] = [
     youtubeId: "bQaFTlq4t2o",
   },
   {
+    vocab: "兄",
+    youtubeId: "HdWUeHlpbS0",
+  },
+  {
+    vocab: "弟",
+    youtubeId: "SXUw1CBEmgk",
+  },
+  {
     vocab: "孫",
     youtubeId: "fQjgZ8pcCOY",
   },
@@ -73,5 +81,21 @@ export const quizData: QuizItem[] = [
     vocab: "三人",
     youtubeId: "OtROM66dIx0",
     start: 4,
+  },
+  {
+    vocab: "結婚",
+    youtubeId: "qcOttQ0bCJ0",
+  },
+  {
+    vocab: "離婚",
+    youtubeId: "aHAlCWbFSjc",
+  },
+  {
+    vocab: "いくつ",
+    youtubeId: "mI7OW5UafMI",
+  },
+  {
+    vocab: "多い",
+    youtubeId: "9MDZ32dXHvE",
   },
 ];

@@ -1,6 +1,7 @@
-import { quizData as foodAndDrink } from "./foodAndDrink";
 import { quizData as family } from "./family";
+import { quizData as foodAndDrink } from "./foodAndDrink";
 import { quizData as hobbies } from "./hobbies";
+import { quizData as weather } from "./weather";
 import { quizData as misc } from "./misc";
 import type { QuizItem } from "./quizItem";
 
@@ -11,9 +12,10 @@ export type Category = {
 };
 
 export const allCategories: Category[] = [
-  { id: "foodAndDrink", label: "飲食", signs: foodAndDrink },
   { id: "family", label: "家族物", signs: family },
+  { id: "foodAndDrink", label: "飲食", signs: foodAndDrink },
   { id: "hobbies", label: "趣味", signs: hobbies },
+  { id: "weather", label: "天気", signs: weather },
   { id: "misc", label: "その他", signs: misc },
 ];
 

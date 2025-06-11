@@ -12,7 +12,9 @@ import { CheckCircle } from "lucide-react";
 function App() {
   const [showConfetti, setShowConfetti] = useState(false);
 
-  const { categories, selected, toggle, totalSelectedSigns } = useCategories();
+  const { categories, selected, toggle, totalSelectedSigns } = useCategories([
+    "weather",
+  ]);
 
   const { startQuiz, currentVideo, next, index, total, status } = useQuiz();
 
