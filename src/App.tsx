@@ -8,7 +8,7 @@ import { useQuiz } from "./quiz/useQuiz";
 import { keys, pickBy, sample, shuffle } from "lodash";
 import { Alert, AlertDescription, AlertTitle } from "./components/ui/alert";
 import { CheckCircle } from "lucide-react";
-import { allVideos } from "./quiz/allCategories"; // Import for findWrongAnswer
+import { allVideos } from "./quiz/allCategories";
 
 function App() {
   const [showConfetti, setShowConfetti] = useState(false);

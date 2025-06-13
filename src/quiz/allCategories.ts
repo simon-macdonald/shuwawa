@@ -10,15 +10,21 @@ export type Category = {
   id: string;
   label: string;
   signs: QuizItem[];
+  count: number;
 };
 
 export const allCategories: Category[] = [
-  { id: "family", label: "家族物", signs: family },
-  { id: "foodAndDrink", label: "飲食", signs: foodAndDrink },
-  { id: "geography", label: "地理", signs: geography },
-  { id: "hobbies", label: "趣味", signs: hobbies },
-  { id: "weather", label: "天気", signs: weather },
-  { id: "misc", label: "その他", signs: misc },
+  { id: "family", label: "家族物", signs: family, count: family.length },
+  {
+    id: "foodAndDrink",
+    label: "飲食",
+    signs: foodAndDrink,
+    count: foodAndDrink.length,
+  },
+  { id: "geography", label: "地理", signs: geography, count: geography.length },
+  { id: "hobbies", label: "趣味", signs: hobbies, count: hobbies.length },
+  { id: "weather", label: "天気", signs: weather, count: weather.length },
+  { id: "misc", label: "その他", signs: misc, count: misc.length },
 ];
 
 export const allVideos: QuizItem[] = allCategories.flatMap((cat) => cat.signs);

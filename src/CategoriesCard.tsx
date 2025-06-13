@@ -7,11 +7,8 @@ import {
   CardHeader,
   CardTitle,
 } from "./components/ui/card";
-
-type Category = {
-  id: string;
-  label: string;
-};
+import { Badge } from "./components/ui/badge";
+import type { Category } from "./quiz/allCategories";
 
 type Props = {
   categories: Category[];
@@ -30,13 +27,18 @@ function CategoriesCard({ categories, selected, onToggle }: Props) {
       </CardHeader>
       <CardContent>
         {categories.map((cat) => (
-          <div className="flex items-center space-x-2">
-            <Switch
-              id={cat.id}
-              checked={selected[cat.id]}
-              onCheckedChange={() => onToggle(cat.id)}
-            />
-            <Label htmlFor={cat.id}>{cat.label}</Label>
+          <div key={cat.id} className="flex items-center justify-between py-2">
+            <div className="flex items-center space-x-2">
+              <Switch
+                id={cat.id}
+                checked={selected[cat.id]}
+                onCheckedChange={() => onToggle(cat.id)}
+              />
+              <Label htmlFor={cat.id} className="cursor-pointer">{cat.label}</Label>
+            </div>
+            {typeof cat.count === 'number' && (
+              <Badge variant="secondary">{cat.count}</Badge>
+            )}
           </div>
         ))}
       </CardContent>
