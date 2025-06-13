@@ -27,14 +27,14 @@ function CategoriesCard({ categories, selected, onToggle }: Props) {
       </CardHeader>
       <CardContent>
         {categories.map((cat) => (
-          <div key={cat.id} className="flex items-center justify-between py-2">
+          <div key={cat.id} className="flex items-center justify-between py-1">
             <div className="flex items-center space-x-2">
               <Switch
                 id={cat.id}
                 checked={selected[cat.id]}
                 onCheckedChange={() => onToggle(cat.id)}
               />
-              <Label htmlFor={cat.id} className="cursor-pointer">{cat.label}</Label>
+              <Label htmlFor={cat.id} className="cursor-pointer text-lg">{cat.label}</Label> {/* Added text-sm */}
             </div>
             {typeof cat.count === 'number' && (
               <Badge variant="secondary">{cat.count}</Badge>

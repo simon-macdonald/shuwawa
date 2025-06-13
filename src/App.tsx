@@ -47,6 +47,7 @@ function App() {
         <Button
           className="w-full max-w-md py-3 text-base font-semibold rounded-xl shadow-sm hover:bg-primary/90 transition"
           onClick={() => startQuiz(keys(pickBy(selected, Boolean)))}
+          disabled={totalSelectedSigns === 0}
         >
           スタート （{totalSelectedSigns}個）
         </Button>
