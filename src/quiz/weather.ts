@@ -69,6 +69,8 @@ export const quizData: QuizItem[] = [
   {
     vocab: "気温",
     youtubeId: "OVBI17dsoQQ",
+    start: 10,
+    hideBottom: true,
   },
   {
     vocab: "花粉症",
