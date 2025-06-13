@@ -15,7 +15,7 @@ export type Category = {
 };
 
 export const allCategories: Category[] = [
-  { id: "time", label: "０９。時間", signs: time, count: time.length },
+  { id: "time", label: "１１。時間", signs: time, count: time.length },
   { id: "family", label: "１３。家族", signs: family, count: family.length },
   { id: "weather", label: "１４。天気", signs: weather, count: weather.length },
   {

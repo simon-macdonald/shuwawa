@@ -18,6 +18,14 @@ export const quizData: QuizItem[] = [
     youtubeId: "c3XA6ZWxcrY",
   },
   {
+    vocab: "妹",
+    youtubeId: "5RrdD2WgZBM",
+  },
+  {
+    vocab: "姉",
+    youtubeId: "r9PmX5q037s",
+  },
+  {
     vocab: "姉妹",
     youtubeId: "5RrdD2WgZBM",
   },

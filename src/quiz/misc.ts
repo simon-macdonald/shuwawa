@@ -45,4 +45,16 @@ export const quizData: QuizItem[] = [
     vocab: "大丈夫",
     youtubeId: "zZHkQPv6kDM",
   },
+  {
+    vocab: "未来・以後・今後・これから",
+    youtubeId: "AxG_KVfCm7A",
+  },
+  {
+    vocab: "悪い",
+    youtubeId: "KxP9RTt3Czk",
+  },
+  {
+    vocab: "良い",
+    youtubeId: "WTJE0RxjArM",
+  },
 ];
