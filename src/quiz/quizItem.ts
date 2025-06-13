@@ -3,4 +3,5 @@ export type QuizItem = {
   youtubeId: string,
   start?: number,
   end?: number,
+  hideBottom?: boolean,
 }

@@ -2,8 +2,13 @@
 
 https://www.nhk.or.jp/handsign/searchJSL/
 https://main.d2qi8oun9qzeq7.amplifyapp.com
-https://www.youtube.com/@すももんの手話動画倉庫/search
 https://ui.shadcn.com/docs/components
+
+# YouTube
+
+https://www.youtube.com/@すももんの手話動画倉庫
+https://www.youtube.com/@shuwaemon
+https://www.youtube.com/@kodachan_shuwa
 
 # React + TypeScript + Vite
 

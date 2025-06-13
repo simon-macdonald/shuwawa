@@ -65,6 +65,14 @@ function VideoPlayer(props: {
         bg-black pointer-events-none z-10
         `}
       />
+      {quizItem.hideBottom &&
+      <div
+        className={`
+          absolute bottom-0 left-0 w-full h-[25%]
+          bg-black pointer-events-none z-10
+        `}
+      />
+      }
       {shuffledAnswers}
     </div>
   );
