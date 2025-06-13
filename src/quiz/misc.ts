@@ -41,4 +41,8 @@ export const quizData: QuizItem[] = [
     youtubeId: "JJ6JBU6FjxY",
     start: 7,
   },
+  {
+    vocab: "大丈夫",
+    youtubeId: "zZHkQPv6kDM",
+  },
 ];

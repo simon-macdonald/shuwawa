@@ -50,6 +50,18 @@ export const quizData: QuizItem[] = [
     youtubeId: "BiSEfvdsgis",
   },
   {
+    vocab: "台風",
+    youtubeId: "mV4i4CoAuGA",
+    start: 6,
+    hideBottom: true,
+  },
+  {
+    vocab: "嵐",
+    youtubeId: "fSzi0oG3NLk",
+    start: 6,
+    hideBottom: true,
+  },
+  {
     vocab: "季節",
     youtubeId: "Ps0YY38GBE4",
     start: 10,

@@ -62,6 +62,10 @@ export const quizData: QuizItem[] = [
     youtubeId: "28dgUWTcK9I",
   },
   {
+    vocab: "一週間",
+    youtubeId: "ZOmjx8hlrQw",
+  },
+  {
     vocab: "遅刻・遅",
     youtubeId: "2eHONgCeOnM",
   },
