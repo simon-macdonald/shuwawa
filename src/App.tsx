@@ -14,7 +14,7 @@ function App() {
   const [showConfetti, setShowConfetti] = useState(false);
 
   const { categories, selected, toggle, totalSelectedSigns } = useCategories([
-    "weather",
+    "transportation",
   ]);
 
   const { startQuiz, currentVideo, next, index, total, status } = useQuiz();

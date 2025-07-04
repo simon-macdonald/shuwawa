@@ -76,4 +76,9 @@ export const quizData: QuizItem[] = [
     vocab: "花粉症",
     youtubeId: "vQQQhK6Yivg",
   },
+  {
+    vocab: "汗",
+    youtubeId: "Jsq8MqRPS7Q",
+    start: 10,
+  },
 ];
