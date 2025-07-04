@@ -61,4 +61,18 @@ export const quizData: QuizItem[] = [
     vocab: "だけ",
     youtubeId: "aRwzAD-rgM8",
   },
+  {
+    vocab: "どちら",
+    youtubeId: "Hz7VimhWFhs",
+  },
+  {
+    vocab: "もちろん",
+    youtubeId: "KPjzW85Op5o",
+  },
+  {
+    vocab: "やる",
+    youtubeId: "PRYsK1uLc_o",
+    start: 8,
+    hideBottom: true,
+  },
 ];

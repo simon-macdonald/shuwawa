@@ -19,6 +19,10 @@ export const quizData: QuizItem[] = [
     youtubeId: "ZCZBNiaJgHo",
   },
   {
+    vocab: "釣り",
+    youtubeId: "MM0W3K0VCLA",
+  },
+  {
     vocab: "旅行",
     youtubeId: "M5xr5WVve80",
     start: 4,
