@@ -5,7 +5,7 @@ import { quizData as transportation } from "./transportation";
 import { quizData as sports } from "./sports";
 import { quizData as foodAndDrink } from "./foodAndDrink";
 import { quizData as geography } from "./geography";
-import { quizData as countries } from "./countries";
+import { quizData as areas } from "./areas";
 import { quizData as hobbies } from "./hobbies";
 import { quizData as misc } from "./misc";
 import type { QuizItem } from "./quizItem";
@@ -30,7 +30,7 @@ export const allCategories: Category[] = [
     count: foodAndDrink.length,
   },
   { id: "geography", label: "地理", signs: geography, count: geography.length },
-  { id: "countries", label: "国", signs: countries, count: countries.length },
+  { id: "areas", label: "地域", signs: areas, count: areas.length },
   { id: "hobbies", label: "趣味", signs: hobbies, count: hobbies.length },
   { id: "misc", label: "その他", signs: misc, count: misc.length },
 ];

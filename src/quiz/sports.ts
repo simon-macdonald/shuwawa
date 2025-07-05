@@ -82,7 +82,7 @@ export const quizData: QuizItem[] = [
   },
   {
     vocab: "トライアスロン",
-    youtubeId: "fJyZkoGznfE",
+    youtubeId: "sjbswGqewcM",
   },
   {
     vocab: "オリエンテーリング",

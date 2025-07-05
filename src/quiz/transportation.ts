@@ -48,8 +48,44 @@ export const quizData: QuizItem[] = [
     start: 9,
   },
   {
+    vocab: "飛行機",
+    youtubeId: "iSXlAG3ia2E",
+    start: 11,
+    hideBottom: true,
+  },
+  {
+    vocab: "船",
+    youtubeId: "0f85pq26Le0",
+    start: 8,
+  },
+  {
+    vocab: "電車",
+    youtubeId: "CDwBL15y9R0",
+    start: 10,
+    hideBottom: true,
+  },
+  {
+    vocab: "新幹線",
+    youtubeId: "a02lPUbrBQ8",
+    start: 7,
+  },
+  {
+    vocab: "乗る",
+    youtubeId: "vvvJC8T0Xjc",
+    start: 8,
+    hideBottom: true,
+  },
+  {
     vocab: "方法",
     youtubeId: "p8-QhfdQBGM",
     start: 9,
+  },
+  {
+    vocab: "近い",
+    youtubeId: "51G4XcF-6Us",
+  },
+  {
+    vocab: "遠い",
+    youtubeId: "pakQSyIbo5Q",
   },
 ];
