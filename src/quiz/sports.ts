@@ -99,11 +99,12 @@ export const quizData: QuizItem[] = [
   {
     vocab: "大谷",
     youtubeId: "blp8aKPJBHo",
+    start: 3,
   },
   {
     vocab: "縄跳び",
-    youtubeId: "MkjGFeQnVK0",
-    start: 9,
+    youtubeId: "YKZtsnig9L0",
+    start: 3,
   },
   {
     vocab: "スケート",
@@ -113,7 +114,6 @@ export const quizData: QuizItem[] = [
   {
     vocab: "パラリンピック",
     youtubeId: "SReoM3zsjmo",
-    start: 9,
   },
   {
     vocab: "陸上競技",
