@@ -1,51 +1,59 @@
 import { useState } from "react";
-import { shuffle } from "lodash";
+import { sampleSize, shuffle, without } from "lodash";
 import type { QuizItem } from "./quizItem";
-import { allCategories } from "./allCategories";
+import { allCategories, allVideos } from "./allCategories";
 
-type QuizStatus = "idle" | "in-progress" | "completed";
+type QuizStatus = "idle" | "active" | "completed";
 
-export type UseQuiz = {
-  startQuiz: (selectedCategories: string[]) => void;
-  currentVideo: QuizItem;
-  next: () => void;
-  index: number;
-  total: number;
-  status: QuizStatus;
+const generateOptions = (correctAnswer: string): string[] => {
+  const allVocab = allVideos.map((v) => v.vocab);
+  const wrongAnswerPool = without(allVocab, correctAnswer);
+  const wrongAnswers = sampleSize(wrongAnswerPool, 3);
+  const allOptions = [correctAnswer, ...wrongAnswers];
+  return shuffle(allOptions);
 };
 
-export function useQuiz(): UseQuiz {
+export function useQuiz() {
   const [quizList, setQuizList] = useState<QuizItem[]>([]);
   const [index, setIndex] = useState(0);
   const [status, setStatus] = useState<QuizStatus>("idle");
+  const [answerOptions, setAnswerOptions] = useState<string[]>([]);
+
+  const currentVideo = quizList[index];
+  const total = quizList.length;
 
   const startQuiz = (selectedCategories: string[]) => {
     const videos = allCategories
       .filter((cat) => selectedCategories.includes(cat.id))
       .flatMap((cat) => cat.signs);
-
-    const randomized = shuffle(videos);
-    setQuizList(randomized);
+    const shuffled = shuffle(videos);
+    setQuizList(shuffled);
     setIndex(0);
-    setStatus("in-progress");
+    setStatus("active");
+
+    setAnswerOptions(generateOptions(shuffled[0].vocab));
   };
 
   const next = () => {
-    if (index + 1 < quizList.length) {
-      setIndex((i) => i + 1);
+    const nextIndex = index + 1;
+    if (nextIndex < quizList.length) {
+      setIndex(nextIndex);
+      setAnswerOptions(generateOptions(quizList[nextIndex].vocab));
     } else {
       setStatus("completed");
+      setQuizList([]);
+      setIndex(0);
+      setAnswerOptions([]);
     }
   };
-
-  const currentVideo = quizList[index] || null;
 
   return {
     startQuiz,
     currentVideo,
     next,
     index,
-    total: quizList.length,
+    total,
     status,
+    answerOptions,
   };
 }

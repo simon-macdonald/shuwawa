@@ -34,7 +34,7 @@ function CategoriesCard({ categories, selected, onToggle }: Props) {
                 checked={selected[cat.id]}
                 onCheckedChange={() => onToggle(cat.id)}
               />
-              <Label htmlFor={cat.id} className="cursor-pointer text-lg">{cat.label}</Label> {/* Added text-sm */}
+              <Label htmlFor={cat.id} className="cursor-pointer text-lg">{cat.label}</Label>
             </div>
             {typeof cat.count === 'number' && (
               <Badge variant="secondary">{cat.count}</Badge>
