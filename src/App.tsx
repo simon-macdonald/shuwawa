@@ -2,11 +2,11 @@ import { Button } from "./components/ui/button";
 import VideoPlayer from "./VideoPlayer";
 import { useState } from "react";
 import { ConfettiBurst } from "./ConfettiBurst";
-import CategoriesCard from "./CategoriesCard";
 import { useCategories } from "./useCategories";
 import { useQuiz } from "./quiz/useQuiz";
 import { keys, pickBy } from "lodash";
 import { CompletedScreen } from "./screens/CompletedScreen";
+import { CategorySelectionScreen } from "./screens/CategorySelectionScreen";
 
 function App() {
   const [showConfetti, setShowConfetti] = useState(false);
@@ -34,20 +34,13 @@ function App() {
 
   if (status === "idle") {
     return (
-      <div className="flex flex-col items-center justify-center min-h-svh px-4 space-y-6">
-        <CategoriesCard
-          categories={categories}
-          selected={selected}
-          onToggle={toggle}
-        />
-        <Button
-          className="w-full max-w-md py-3 text-base font-semibold rounded-xl shadow-sm hover:bg-primary/90 transition"
-          onClick={() => startQuiz(keys(pickBy(selected, Boolean)))}
-          disabled={totalSelectedSigns === 0}
-        >
-          スタート （{totalSelectedSigns}個）
-        </Button>
-      </div>
+      <CategorySelectionScreen
+        categories={categories}
+        selected={selected}
+        onToggle={toggle}
+        totalSelectedSigns={totalSelectedSigns}
+        onStartQuiz={() => startQuiz(keys(pickBy(selected, Boolean)))}
+      />
     );
   }
 
