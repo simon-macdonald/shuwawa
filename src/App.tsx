@@ -23,6 +23,7 @@ function App() {
     total,
     status,
     answerOptions,
+    resetQuiz,
   } = useQuiz();
 
   const success = () => {
@@ -45,7 +46,7 @@ function App() {
   }
 
   if (status === "completed") {
-    return <CompletedScreen />;
+    return <CompletedScreen onReset={resetQuiz} />;
   }
 
   if (currentVideo) {

@@ -47,6 +47,12 @@ export function useQuiz() {
     }
   };
 
+  const resetQuiz = () => {
+    setStatus("idle");
+    setQuizList([]);
+    setIndex(0);
+  };
+
   return {
     startQuiz,
     currentVideo,
@@ -55,5 +61,6 @@ export function useQuiz() {
     total,
     status,
     answerOptions,
+    resetQuiz,
   };
 }
