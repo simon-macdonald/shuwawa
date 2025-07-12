@@ -1,3 +1,4 @@
+import { quizData as colors } from "./colors";
 import { quizData as time } from "./time";
 import { quizData as family } from "./family";
 import { quizData as weather } from "./weather";
@@ -18,6 +19,7 @@ export type Category = {
 };
 
 export const allCategories: Category[] = [
+  { id: "colors", label: "３。色", signs: colors, count: colors.length },
   { id: "time", label: "１１。時間", signs: time, count: time.length },
   { id: "family", label: "１３。家族", signs: family, count: family.length },
   { id: "weather", label: "１４。天気", signs: weather, count: weather.length },
