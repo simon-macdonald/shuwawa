@@ -4,4 +4,5 @@ export type QuizItem = {
   start?: number,
   end?: number,
   hideBottom?: boolean,
+  tags?: string[],
 }

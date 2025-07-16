@@ -70,6 +70,41 @@ export const quizData: QuizItem[] = [
     youtubeId: "KPjzW85Op5o",
   },
   {
+    vocab: "凄い",
+    youtubeId: "aNLunvObAxお",
+    tags: ["1"],
+  },
+  {
+    vocab: "いつ",
+    youtubeId: "iPmIKVTr6qw",
+    tags: ["1"],
+  },
+  {
+    vocab: "帰る",
+    youtubeId: "K7lNjI66nWU",
+  },
+  {
+    vocab: "デート",
+    youtubeId: "oTXzdL1DXqg",
+    start: 12,
+    hideBottom: true,
+    tags: ["1"],
+  },
+  {
+    vocab: "でも",
+    youtubeId: "bWSGz12aSu4",
+    start: 7,
+    hideBottom: true,
+    tags: ["1"],
+  },
+  {
+    vocab: "生活・暮らす",
+    youtubeId: "tHxpblAaApg",
+    start: 12,
+    hideBottom: true,
+    tags: ["1"],
+  },
+  {
     vocab: "やる",
     youtubeId: "PRYsK1uLc_o",
     start: 8,

@@ -6,8 +6,8 @@ export const quizData: QuizItem[] = [
     youtubeId: "luUOug2WEhI",
   },
   {
-  vocab: "飲む",
-  youtubeId: "cYF1wy6PR_o",
+    vocab: "飲む",
+    youtubeId: "cYF1wy6PR_o",
   },
   {
     vocab: "美味しい",
@@ -58,5 +58,12 @@ export const quizData: QuizItem[] = [
   {
     vocab: "コーヒー",
     youtubeId: "gq1TkPUvd3w",
+  },
+  {
+    vocab: "肉",
+    youtubeId: "ETnL22ohxLc",
+    start: 10,
+    hideBottom: true,
+    tags: ["1"],
   },
 ];
