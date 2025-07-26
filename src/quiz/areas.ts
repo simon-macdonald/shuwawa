@@ -56,4 +56,16 @@ export const quizData: QuizItem[] = [
     start: 6,
     tags: ["2"],
   },
+  {
+    vocab: "銀座",
+    youtubeId: "31mqeI_xi4w",
+    tags: ["3"],
+  },
+  {
+    vocab: "スペイン",
+    youtubeId: "MVTJ38pPiOA",
+    start: 8,
+    end: 10,
+    tags: ["3"],
+  },
 ];

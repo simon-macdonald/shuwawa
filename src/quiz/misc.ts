@@ -138,5 +138,38 @@ export const quizData: QuizItem[] = [
     youtubeId: "gm2z-hd4Acs",
     start: 7,
   },
+  {
+    vocab: "自然",
+    youtubeId: "5U3QlA9CJxg",
+    start: 11,
+    hideBottom: true,
+    tags: ["3"],
+  },
+  {
+    vocab: "イベント",
+    youtubeId: "N1X6_AKPOh0",
+    start: 3,
+    tags: ["3"],
+  },
+  {
+    vocab: "薬",
+    youtubeId: "H0AXrfpqV9c",
+    start: 12,
+    hideBottom: true,
+    tags: ["3"],
+  },
+  {
+    vocab: "もっと",
+    youtubeId: "8L44TXlb4p0",
+    end: 3,
+    tags: ["3"],
+  },
+  {
+    vocab: "コロナ",
+    youtubeId: "N_SRhxJO8IU",
+    start: 8,
+    tags: ["3"],
+  },
 ];
 // 2: 変
+// 3: 問題
