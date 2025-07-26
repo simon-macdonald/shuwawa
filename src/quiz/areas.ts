@@ -44,4 +44,16 @@ export const quizData: QuizItem[] = [
     start: 10,
     hideBottom: true,
   },
+  {
+    vocab: "お台場",
+    youtubeId: "nJibTNLCQnA",
+    start: 13,
+    tags: ["2"],
+  },
+  {
+    vocab: "中国",
+    youtubeId: "dYjK9tGmk6s",
+    start: 6,
+    tags: ["2"],
+  },
 ];

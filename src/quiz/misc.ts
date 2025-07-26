@@ -80,6 +80,23 @@ export const quizData: QuizItem[] = [
     tags: ["1"],
   },
   {
+    vocab: "合う",
+    youtubeId: "DNLPcKFwYtI",
+    tags: ["2"],
+  },
+  {
+    vocab: "決める",
+    youtubeId: "DT6J4GHyGVc",
+    start: 10,
+    tags: ["2"],
+  },
+  {
+    vocab: "残念",
+    youtubeId: "9mV--UpEvYw",
+    start: 6,
+    tags: ["2"],
+  },
+  {
     vocab: "帰る",
     youtubeId: "K7lNjI66nWU",
   },
@@ -110,4 +127,16 @@ export const quizData: QuizItem[] = [
     start: 8,
     hideBottom: true,
   },
+  {
+    vocab: "自分",
+    youtubeId: "Uybf5nWEJPc",
+    start: 12,
+    hideBottom: true,
+  },
+  {
+    vocab: "他",
+    youtubeId: "gm2z-hd4Acs",
+    start: 7,
+  },
 ];
+// 2: 変
