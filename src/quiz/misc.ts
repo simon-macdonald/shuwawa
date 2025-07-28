@@ -170,6 +170,18 @@ export const quizData: QuizItem[] = [
     start: 8,
     tags: ["3"],
   },
+  {
+    vocab: "古い",
+    youtubeId: "XIICc83P0KY",
+    tags: ["3"],
+  },
+  {
+    vocab: "若い",
+    youtubeId: "adW0kugU88E",
+    start: 10,
+    hideBottom: true,
+    tags: ["3"],
+  },
 ];
 // 2: 変
 // 3: 問題
