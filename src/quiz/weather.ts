@@ -75,6 +75,7 @@ export const quizData: QuizItem[] = [
   {
     vocab: "花粉症",
     youtubeId: "vQQQhK6Yivg",
+    // pain
   },
   {
     vocab: "汗",

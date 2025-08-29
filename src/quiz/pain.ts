@@ -80,4 +80,40 @@ export const quizData: QuizItem[] = [
     vocab: "お大事に",
     youtubeId: "PAN9CgmYQnA",
   },
+  {
+    vocab: "病気",
+    youtubeId: "5EaC0388d9c",
+  },
+  {
+    vocab: "健康",
+    youtubeId: "ARfdZIKINWU",
+    start: 7,
+  },
+  {
+    vocab: "怪我",
+    youtubeId: "i8qVqSvFNR4",
+    start: 6,
+  },
+  {
+    vocab: "感染",
+    youtubeId: "chceFHckt1E",
+    start: 7,
+  },
+  {
+    vocab: "救急車",
+    youtubeId: "-fqYfkPzRfo",
+    start: 8,
+  },
+  {
+    vocab: "体",
+    youtubeId: "r6IDxuUR1lw",
+    start: 7,
+    hideBottom: true,
+  },
+  {
+    vocab: "医者",
+    youtubeId: "S6tzpPkBoko",
+    start: 11,
+    hideBottom: true,
+  },
 ];
