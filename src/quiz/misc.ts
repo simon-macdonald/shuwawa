@@ -165,12 +165,6 @@ export const quizData: QuizItem[] = [
     tags: ["3"],
   },
   {
-    vocab: "コロナ",
-    youtubeId: "N_SRhxJO8IU",
-    start: 8,
-    tags: ["3"],
-  },
-  {
     vocab: "古い",
     youtubeId: "XIICc83P0KY",
     tags: ["3"],
@@ -182,6 +176,38 @@ export const quizData: QuizItem[] = [
     hideBottom: true,
     tags: ["3"],
   },
+  {
+    vocab: "溶ける",
+    youtubeId: "aAj886tNNQA",
+    start: 10,
+    tags: ["4"],
+  },
+  {
+    vocab: "似てる",
+    youtubeId: "qZYzGrUPQmY",
+    start: 8,
+    tags: ["4"],
+  },
+  {
+    vocab: "水",
+    youtubeId: "ZYg9aDTAFx4",
+    start: 12,
+    tags: ["4"],
+  },
+  {
+    vocab: "マナー",
+    youtubeId: "NKd6n95MErk",
+    start: 6,
+    tags: ["4"],
+  },
+  {
+    vocab: "危ない",
+    youtubeId: "XUMC2l2KqV8",
+    start: 12,
+    hideBottom: true,
+  },
 ];
 // 2: 変
 // 3: 問題
+// 4: 消す　付ける　あくび　フィリピン
+// 5: 公園　絶対　大阪
