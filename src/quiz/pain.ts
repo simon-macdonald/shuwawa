@@ -107,7 +107,7 @@ export const quizData: QuizItem[] = [
   {
     vocab: "体",
     youtubeId: "r6IDxuUR1lw",
-    start: 7,
+    start: 12,
     hideBottom: true,
   },
   {
