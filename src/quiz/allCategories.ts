@@ -5,6 +5,7 @@ import { quizData as weather } from "./weather";
 import { quizData as transportation } from "./transportation";
 import { quizData as sports } from "./sports";
 import { quizData as pain } from "./pain";
+import { quizData as shopping } from "./shopping";
 import { quizData as foodAndDrink } from "./foodAndDrink";
 import { quizData as geography } from "./geography";
 import { quizData as areas } from "./areas";
@@ -41,6 +42,12 @@ export const allCategories: Category[] = [
     label: "１７。痛み",
     signs: pain,
     count: pain.length,
+  },
+  {
+    id: "shopping",
+    label: "１８。購買",
+    signs: shopping,
+    count: shopping.length,
   },
   {
     id: "foodAndDrink",
