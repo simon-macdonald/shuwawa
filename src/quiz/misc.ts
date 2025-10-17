@@ -206,6 +206,11 @@ export const quizData: QuizItem[] = [
     start: 12,
     hideBottom: true,
   },
+  {
+    vocab: "時々",
+    youtubeId: "-FRitcpz8u8",
+    start: 6,
+  },
 ];
 // 2: 変
 // 3: 問題

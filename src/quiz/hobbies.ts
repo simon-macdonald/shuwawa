@@ -17,6 +17,7 @@ export const quizData: QuizItem[] = [
   {
     vocab: "料理",
     youtubeId: "ZCZBNiaJgHo",
+    tags: ["19"],
   },
   {
     vocab: "釣り",

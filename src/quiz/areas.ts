@@ -2,6 +2,37 @@ import type { QuizItem } from "./quizItem"
 
 export const quizData: QuizItem[] = [
   {
+    vocab: "日本",
+    youtubeId: "HUNfbdLsXJY",
+    start: 11,
+    hideBottom: true,
+    tags: ["19"],
+  },
+  {
+    vocab: "フランス",
+    youtubeId: "NFOkgYOaOWM",
+    start: 7,
+    tags: ["19"],
+  },
+  {
+    vocab: "イタリア",
+    youtubeId: "jZM2jo1oUYA",
+    start: 9,
+    tags: ["19"],
+  },
+  {
+    vocab: "アメリカ",
+    youtubeId: "9ydTAetqTaE",
+    start: 10,
+    tags: ["19"],
+  },
+  {
+    vocab: "スペイン",
+    youtubeId: "wuSvjqOfbeE",
+    start: 15,
+    tags: ["19"],
+  },
+  {
     vocab: "英国",
     youtubeId: "9DHCED0UMx0",
     start: 15,
@@ -36,7 +67,7 @@ export const quizData: QuizItem[] = [
     vocab: "中国",
     youtubeId: "dYjK9tGmk6s",
     start: 6,
-    tags: ["1"],
+    tags: ["1", "19"],
   },
   {
     vocab: "沖縄",
@@ -48,12 +79,6 @@ export const quizData: QuizItem[] = [
     vocab: "お台場",
     youtubeId: "nJibTNLCQnA",
     start: 13,
-    tags: ["2"],
-  },
-  {
-    vocab: "中国",
-    youtubeId: "dYjK9tGmk6s",
-    start: 6,
     tags: ["2"],
   },
   {
