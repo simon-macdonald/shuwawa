@@ -9,18 +9,25 @@ import { quizData as shopping } from "./shopping";
 import { quizData as foodAndDrink } from "./foodAndDrink";
 import { quizData as geography } from "./geography";
 import { quizData as areas } from "./areas";
+import { quizData as cooking } from "./cooking";
 import { quizData as hobbies } from "./hobbies";
 import { quizData as misc } from "./misc";
+import { quizData as osakaExpo } from "./osakaExpo";
 import type { QuizItem } from "./quizItem";
 
-export type Category = {
+type CategoryDefinition = {
   id: string;
+  slug?: string;
   label: string;
   signs: QuizItem[];
   count: number;
 };
 
-export const allCategories: Category[] = [
+export type Category = CategoryDefinition & {
+  slug: string;
+};
+
+const categoryDefinitions: CategoryDefinition[] = [
   { id: "colors", label: "３。色", signs: colors, count: colors.length },
   { id: "time", label: "１１。時間", signs: time, count: time.length },
   { id: "family", label: "１３。家族", signs: family, count: family.length },
@@ -57,8 +64,20 @@ export const allCategories: Category[] = [
   },
   { id: "geography", label: "地理", signs: geography, count: geography.length },
   { id: "areas", label: "地域", signs: areas, count: areas.length },
+  { id: "cooking", label: "料理", signs: cooking, count: cooking.length },
   { id: "hobbies", label: "趣味", signs: hobbies, count: hobbies.length },
+  { id: "osakaExpo", slug: "osaka-expo", label: "万博", signs: osakaExpo, count: osakaExpo.length },
   { id: "misc", label: "その他", signs: misc, count: misc.length },
 ];
+
+const slugFromId = (id: string) =>
+  id.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
+
+export const allCategories: Category[] = categoryDefinitions.map(
+  (category) => ({
+    ...category,
+    slug: category.slug ?? slugFromId(category.id),
+  })
+);
 
 export const allVideos: QuizItem[] = allCategories.flatMap((cat) => cat.signs);
